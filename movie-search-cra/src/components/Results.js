@@ -2,11 +2,13 @@ import React from "react"
 import filmIcon from "../images/film-icon.png"
 import starIcon from "../images/star-icon.png"
 import addIcon from "../images/add-icon.png"
+import greenCheck from "../images/green-icon.png"
 
-export default function Results({searchSubmit, movieData}) {
-    if (searchSubmit) {
+
+export default function Results({searchSubmit, movieData, addToWatchlist}) {
+
+    if (searchSubmit === true) {
         return movieData.map(film => {
-            console.log(film)
             return (
                 <div className="movie-item">
 
@@ -18,9 +20,9 @@ export default function Results({searchSubmit, movieData}) {
                             <p><img src={starIcon} alt="star"/>{film.vote_average}</p>
                         </div>
 
-                        <div class="release-addWatchlist">
+                        <div className="release-addWatchlist">
                             <p>Release Date: {film.release_date}</p>
-                            <button id="watchlist-btn"><img src={addIcon} alt=""/>Watchlist</button>
+                            <button onClick={()=>addToWatchlist(film.id)}><img src={film.addedToWatchlist ? greenCheck : addIcon} alt=""/>Watchlist</button>
                         </div>
                         
                         <p>{film.overview}</p>

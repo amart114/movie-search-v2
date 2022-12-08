@@ -25,6 +25,20 @@ export default function Search() {
         setSearchSubmit(true)
     }
 
+    function addToWatchlist(id) {
+        const updatedMovieArray = movieData.map(film => {
+            if (film.id === id) {
+                if(film.addedToWatchlist) {
+                    return {...film, addedToWatchlist: !film.addedToWatchlist}
+                }else {
+                    return {...film, addedToWatchlist: true}
+                }
+            }
+            return film
+        })
+        setMovieData(updatedMovieArray)
+    }
+
     return (
         <>
             <div className="main-container">
@@ -50,6 +64,7 @@ export default function Search() {
                     {<Results
                         searchSubmit={searchSubmit}
                         movieData={movieData}
+                        addToWatchlist={addToWatchlist}
                     />}
                 </div>
                 

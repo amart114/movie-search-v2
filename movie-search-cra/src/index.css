@@ -115,6 +115,10 @@ code {
   margin-left: 2rem;
 }
 
+.title-rating img {
+  margin-right: 3px;
+}
+
 .release-addWatchlist {
   display: flex;
   justify-content: flex-start;
