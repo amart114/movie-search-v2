@@ -4,7 +4,7 @@ import {Link} from "react-router-dom"
 export default function Watchlist() {
     return (
         <div>
-            <Link to="/"><a>Search</a></Link>
+            <Link to="/">Search</Link>
         </div>
     )
 }

@@ -16,13 +16,13 @@ code {
   height: 100vh;
 }
 
-.main-container a {
+.main-container Link {
   color: white;
   text-decoration: none;
   cursor: pointer;
 }
 
-.main-container a:hover {
+.main-container Link:hover {
   color: greenyellow;
 }
 
@@ -84,5 +84,48 @@ code {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 3rem;
+  padding-top: 5rem;
+}
+
+.movie-item {
+  display: flex;
+  margin-bottom: 20px;
+  width: 700px;
+  align-items: center;
+  border-bottom: 2px solid grey;
+}
+
+.movie-item > img {
+  max-width: 25%;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+
+.movie-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.title-rating {
+  display: flex;
+  align-items: center;
+}
+
+.title-rating p {
+  margin-left: 2rem;
+}
+
+.release-addWatchlist {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.release-addWatchlist button {
+  margin-left: 20px;
+  border: none;
+  background-color: white;
+}
+
+.release-addWatchlist img {
+  margin-right: 5px;
 }
