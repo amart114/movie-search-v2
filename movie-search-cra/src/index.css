@@ -39,6 +39,12 @@ code {
   color: whitesmoke;
 }
 
+.top-container a {
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
 .title {
   padding-top: 6rem;
   margin-right: 2em;
