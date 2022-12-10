@@ -29,12 +29,15 @@ function ContextProvider({children}) {
     }
 
     function addToWatchlist(film) {
+        // localStorage.setItem("films", JSON.stringify(film))
         setWatchlist(prevList => [...prevList, film])
     }
 
     function removeFromWatchlist(id) {
+        // localStorage.removeItem(`films`)
         setWatchlist(prevList => prevList.filter(film => film.id !== id))
     }
+    
 
     function renderSearchResults(data) {
         return data.map(film => {
@@ -124,39 +127,3 @@ function ContextProvider({children}) {
 
 export {ContextProvider, Context}
 
-
- // function toggleWatchlist(id) {
-    //     if(watchlist.length > 0) {
-    //         const updatedWatchlist = watchlist.map((savedFilm, index) => {
-    //             if(savedFilm.id === id) {
-
-    //             } 
-    //         })
-    //     } 
-    // }
-
-
-    // function toggleWatchlist(id) {
-    //     const updatedMovieArray = movieData.map(film => {
-    //         if (film.id === id) {
-    //             if(film.addedToWatchlist) {
-    //                 return {...film, addedToWatchlist: !film.addedToWatchlist}
-    //             }else {
-    //                 return {...film, addedToWatchlist: true}
-    //             }
-    //         }
-    //         return film
-    //     })
-    //     setMovieData(updatedMovieArray)
-    // }
-
-    // function updateWatchlistArr(data) {
-    //     const watchlistArr = data.map(film => {
-    //         if (film.addedToWatchlist === true && !watchlistArr.includes(film.id)) {
-    //             return film
-    //         }
-    //     })
-    //     setWatchlist(watchlistArr)
-    // }
-
-    // <button onClick={()=>toggleWatchlist(film.id)}><img src={film.addedToWatchlist ? greenCheck : addIcon} alt=""/>Watchlist</button>

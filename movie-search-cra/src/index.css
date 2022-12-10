@@ -1,8 +1,8 @@
 body {
   margin: 0;
   font-family: 'Roboto', 'Segoe UI', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 
+  sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -39,10 +39,19 @@ code {
   color: whitesmoke;
 }
 
+.top-container h1 {
+  font-weight: bolder;
+  font-size: 3rem;
+  letter-spacing: 1px;
+  color: whitesmoke;
+}
+
 .top-container a {
-  color: white;
+  color: whitesmoke;
   cursor: pointer;
   text-decoration: none;
+  font-weight: bolder;
+  letter-spacing: 1px;
 }
 
 .title {
@@ -64,6 +73,15 @@ code {
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
     border-radius: 6px;
     box-sizing: border-box;
+    
+}
+
+.search-btn {
+  background-color:darkorange;
+  font-family:inherit;
+  letter-spacing: 1px;
+  font-weight: bolder;
+  
 }
 
 .search-bar input {

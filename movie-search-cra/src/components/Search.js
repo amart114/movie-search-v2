@@ -9,7 +9,6 @@ export default function Search() {
     const{userSearch, 
         handleChange,
         handleSubmit} = useContext(Context)
-
     return (
         <>
             <div className="main-container">

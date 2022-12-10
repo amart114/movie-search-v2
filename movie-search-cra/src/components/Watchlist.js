@@ -4,6 +4,14 @@ import {Context} from "../Context"
 
 export default function Watchlist() {
     const {watchlist, renderWatchlist} = useContext(Context)
+      
+    // useEffect(() => {
+    //     const savedList = JSON.parse(localStorage.getItem("films"))
+    //     if (savedList) {
+    //         setWatchlist(savedList)
+    //     }
+    // }, [watchlist]) 
+
     return (
         <>
             <div className="main-container">
