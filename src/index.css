@@ -16,16 +16,6 @@ code {
   height: 100vh;
 }
 
-.main-container Link {
-  color: white;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.main-container Link:hover {
-  color: greenyellow;
-}
-
 .top-container {
   height: 40%;
   background-image: url("images/Movie-BG.jpg");
@@ -54,6 +44,10 @@ code {
   text-decoration: none;
   font-weight: bolder;
   letter-spacing: 1px;
+}
+
+.top-container button:hover {
+  color:darkorange;
 }
 
 .title {
