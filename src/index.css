@@ -46,8 +46,10 @@ code {
   color: whitesmoke;
 }
 
-.top-container a {
+.top-container button {
   color: whitesmoke;
+  background: none;
+  border: none;
   cursor: pointer;
   text-decoration: none;
   font-weight: bolder;

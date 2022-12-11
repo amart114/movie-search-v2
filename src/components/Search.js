@@ -14,7 +14,7 @@ export default function Search() {
             <div className="main-container">
                 <div className="top-container">
                     <h1 className="title">Find your film</h1>
-                    <Link to="/watchlist"><a href="#">Go To Saved Watchlist</a></Link>
+                    <Link to="/watchlist"><button>Go To Saved Watchlist</button></Link>
                 </div>
                 
                 <div className="search-bar"> 

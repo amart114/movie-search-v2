@@ -17,7 +17,7 @@ export default function Watchlist() {
             <div className="main-container">
                 <div className="top-container">
                     <h1 className="title">Watchlist</h1>
-                    <Link to="/">Go To Search</Link>
+                    <Link to="/"><button>Go To Search</button></Link>
                 </div>
                 <div className="bottom-container">
                     {renderWatchlist(watchlist)}
