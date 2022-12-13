@@ -14,8 +14,14 @@ function ContextProvider({children}) {
 
     useEffect(() => {
         fetch(`https://api.themoviedb.org/3/search/movie?api_key=bc1d2f76e11a46c1cc9ef0ee7ce8670a&query=${userSearch}`)
-        .then(res => res.json())
+        .then(res => {
+            if(!res.ok) {
+                throw Error("Something went wrong")
+            }
+            return res.json()
+        })
         .then(data => setMovieData(data.results))
+        .catch(err => console.error(err))
     }, [userSearch])
 
     function handleChange(e) {
