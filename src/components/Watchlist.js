@@ -4,6 +4,8 @@ import {Context} from "../Context"
 
 export default function Watchlist() {
     const {watchlist, renderWatchlist} = useContext(Context)
+
+// eventually will finish below hook to pull watchlist from localStorage
       
     // useEffect(() => {
     //     const savedList = JSON.parse(localStorage.getItem("films"))

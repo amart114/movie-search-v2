@@ -12,6 +12,8 @@ function ContextProvider({children}) {
     const [movieData, setMovieData] = useState([])
     const [watchlist, setWatchlist] = useState([])
 
+// initial API call 
+
     useEffect(() => {
         fetch(`https://api.themoviedb.org/3/search/movie?api_key=bc1d2f76e11a46c1cc9ef0ee7ce8670a&query=${userSearch}`)
         .then(res => {
@@ -33,6 +35,8 @@ function ContextProvider({children}) {
         e.preventDefault()
         setSearchSubmit(true)
     }
+
+// eventually would like for the addToWatchlist and removeFromWatchlist functions to add and remove films via local storage.
 
     function addToWatchlist(film) {
         // localStorage.setItem("films", JSON.stringify(film))
@@ -85,6 +89,8 @@ function ContextProvider({children}) {
             )
         })
     }
+
+// function used to render watchlist after search is submitted. This should eventually be replaced by the function above (renderSearchResults) to render any movie on the site.
 
     function renderWatchlist(data) {
         return data.map(film => {
